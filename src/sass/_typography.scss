@@ -1,0 +1,148 @@
+/*------------- TYPOGRAPHY --------------*/
+
+$swell-header-h2: (xs: 2rem,
+sm: 2rem,
+md: 2.25rem,
+lg: 2.5rem,
+xl: 2.75rem) !default;
+
+.full-screen {
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.swell-title {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: $font-secondary;
+
+    &.highlighted-bg-txt {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        position: absolute;
+        left: 0;
+        white-space: nowrap;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        font-size: 5rem;
+        color: #E7E7E7;
+        letter-spacing: 4px;
+
+        &.highlighted-bg-txt-alt {
+            left: auto;
+            right: 0;
+        }
+    }
+}
+
+.swell-title-wrap {
+    padding: 1rem 0;
+    text-align: center;
+    @include transition($transition-base);
+
+    .swell-title.swell-main-title {
+        position: relative;
+        display: inline-block;
+        padding: 0 1rem;
+        z-index: 10;
+        @include transition($transition-base);
+
+        &.swell-title-style {
+            &:before {
+                content: "";
+                position: absolute;
+                height: 10px;
+                background: $site-accent;
+                left: 10%;
+                bottom: 8px;
+                width: 10px;
+                transform: translate(-50%);
+                border-radius: 50px;
+                z-index: -1;
+                @include transition($transition-base);
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                height: 10px;
+                background: $site-accent;
+                left: 50%;
+                bottom: 8px;
+                width: 75%;
+                transform: translate(-50%);
+                border-radius: 50px;
+                z-index: -1;
+                @include transition($transition-base);
+            }
+
+            &.swell-title-animate {
+                @include transition($transition-base);
+
+                &:hover {
+                    @include transition($transition-base);
+
+                    &:before {
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        width: 10px;
+                        transform: unset;
+                        @include transition($transition-base);
+                    }
+
+                    &:after {
+                        height: 100%;
+                        left: 100%;
+                        bottom: 0;
+                        width: 10px;
+                        transform: unset;
+                        @include transition($transition-base);
+                    }
+                }
+
+            }
+
+            &.swell-title-autumn {
+                &:before {
+                    background-color: $swell-title-autumn;
+                }
+
+                &:after {
+                    background-color: $swell-title-autumn;
+                }
+
+            }
+
+            &.-title-summer {
+                &:before {
+                    background-color: $swell-title-summer;
+                }
+
+                &:after {
+                    background-color: $swell-title-summer;
+                }
+
+            }
+
+            &.swell-title-rainy {
+                &:before {
+                    background-color: $swell-title-rainy;
+                }
+
+                &:after {
+                    background-color: $swell-title-rainy;
+                }
+
+            }
+        }
+
+    }
+}
+
+.subtitle {
+    font-family: $font-secondary;
+    font-size: 18px;
+    font-weight: 700;
+}

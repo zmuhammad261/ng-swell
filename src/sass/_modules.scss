@@ -1,0 +1,173 @@
+.featured-section {
+    position: relative;
+
+    .featured-wrap {
+        position: relative;
+        overflow: hidden;
+        @include transition($transition-base);
+
+        .info-wrap {
+            position: absolute;
+            top: 25%;
+
+            &.light {
+                color: #F0F0F0;
+            }
+        }
+
+        .img-wrap {
+            @include transition($transition-base);
+
+            &:before {
+                display: block;
+                content: "";
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: linear-gradient(to right, rgb(245, 247, 250) 0%, rgba(195, 207, 226, 0.5) 100%);
+                @include transition($transition-base);
+            }
+        }
+
+        &:hover {
+            .img-wrap {
+                -webkit-transform: scale(1.2);
+                -moz-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                -o-transform: scale(1.2);
+                transform: scale(1.2);
+
+                &:before {
+                    opacity: 0;
+                    @include transition($transition-base);
+                }
+            }
+        }
+    }
+}
+
+.special-section {
+    .section-with-bg_img {
+        background: url(/assets/img/couch-with-lamp.jpg) center center;
+    }
+}
+
+.countdown {
+    .count-section {
+        display: inline-block;
+        min-width: 100px;
+        min-height: 100px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background: #fff;
+        margin: 0 15px;
+        font-family: $font-secondary;
+        box-shadow: 0.5px 1px 2rem rgba(0, 0, 0, 0.3);
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .count-amount {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .count-period {
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            color: map-get($text-color, text_deep_blue);
+            font-weight: bold;
+        }
+    }
+}
+
+.whats-more-section {
+    background: $light-bg;
+}
+
+/*------------- FOOTER --------------*/
+
+.swell-footer {
+    font-size: 15px;
+    color: $footer-color;
+
+    .swell-title {
+        position: relative;
+        padding-bottom: 0.5rem;
+        margin-bottom: 2rem;
+        color: #202020;
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            background: $site-accent;
+            left: 0;
+            bottom: 0px;
+            width: 30px;
+            @include transition($transition-base);
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 0.5rem;
+            @include transition($transition-base);
+
+            span {
+                padding-right: 0.5rem;
+                vertical-align: middle;
+
+                &:before {
+                    font-weight: bold !important;
+                }
+            }
+        }
+    }
+
+    .footer-links-wrap {
+        .footer-link {
+            position: relative;
+            color: $site-accent;
+            text-decoration: none;
+            overflow: hidden;
+            display: inline-block;
+            @include transition($transition-base);
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: -500px;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                border-radius: 10px;
+                background: $site-accent;
+                @include transition($transition-base);
+            }
+
+            &:hover {
+
+                &:before {
+                    left: 0;
+                    @include transition($transition-base);
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        .copyright-text {
+            margin: 0;
+        }
+    }
+}

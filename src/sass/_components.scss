@@ -1,0 +1,126 @@
+/*------------- COMPONENTS --------------*/
+
+.btn {
+	border-radius: 50px;
+	padding: 0.5rem 2rem;
+	background: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: $site-text-color;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    border-color: transparent !important;
+    cursor: pointer;
+	&:hover {
+		-webkit-box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+    box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+	}
+}
+
+.btn-with-color {
+	&:hover {
+		color: $site-accent;
+	}
+}
+
+.btn-wrap {
+	.btn {
+
+		&.btn-with-icon {
+			position: relative;
+			overflow: hidden;
+
+			span {
+				@include transition($transition-base);
+				display: inline-block;
+			}
+
+			.show {
+				transform: translateX(0);
+				@include transition($transition-base);
+			}
+
+		.hidden {
+		    transform: translateX(-500px);
+		    position: absolute;
+		    @include transition($transition-base);
+		}
+
+		&:hover {
+			.show {
+
+			    transform: translateX(500px);
+			    position: absolute;
+			    @include transition($transition-base);
+			}
+
+			.hidden {
+				@include transition($transition-base);
+				transform: translateX(0);
+				position: relative;
+			}
+		}
+	}
+	}
+}
+
+
+/*------------- FORM --------------*/
+
+.swell-form {
+	.form-control {
+		border-radius: 2px;
+		border: 0;
+		font-size: 0.85rem;
+	}
+	.input-group-append {
+		.btn {
+			border-radius: 2px;
+			border: none;
+			display: flex;
+		}
+	}
+}
+
+/*------------- TESTIMONIAL --------------*/
+
+.swell-testimonial {
+	.testimonials-list-container {
+		.testimonials-list {
+			font-size: 1rem;
+			.testimonial-author {
+				.testimonial-author-img {
+					width: 65px;
+					border-radius: 50%;
+					margin: auto;
+					margin-bottom: 1.25rem;
+				}
+				span {
+					font-weight: 600;
+					text-transform: uppercase;
+					font-size: 0.9rem;
+				}
+			}
+		}
+	}
+}
+
+.slick-slider {
+  overflow: hidden;
+
+  .slick-slide {
+    outline: none;
+  }
+
+	.slick-arrow {
+		&.slick-prev {
+			left: 25px;
+		}
+		&.slick-next {
+			right: 25px;
+		}
+		&:before {
+			color: #000;
+		}
+	}
+}
+

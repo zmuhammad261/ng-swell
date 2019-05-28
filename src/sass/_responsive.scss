@@ -1,0 +1,35 @@
+@include media-breakpoint-up(md) {
+    .swell-large-font {
+        font-size: 5rem;
+    }
+
+    .swell-title-wrap {
+        .swell-title.swell-main-title {
+            font-size: map-get($swell-header-h2, md);
+        }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .swell-title-wrap {
+        .swell-title.swell-main-title {
+            font-size: map-get($swell-header-h2, lg);
+        }
+    }
+}
+
+@include media-breakpoint-only(lg) {
+    .sale-section-small {
+        .swell-large-font {
+            font-size: 4rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .swell-title-wrap {
+        .swell-title.swell-main-title {
+            font-size: map-get($swell-header-h2, xl);
+        }
+    }
+}

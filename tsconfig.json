@@ -1,11 +1,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": { "*": ["types/*"] },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "module": "es2015",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,

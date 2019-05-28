@@ -1,0 +1,172 @@
+/*------------- UTILITIES/HELPER --------------*/
+
+$text-color: (
+	text_light: #F0F0F0,
+text_yellow: #FFC74A,
+text_orange: #FF9B34,
+text_mild_orange: #FF9847,
+text_deep_orange: #FF6835,
+text_light_blue: #85D2E3,
+text_blue: #1797E7,
+text_medium_blue: #1B4CBD,
+text_deep_blue: #21244E,
+text_violet: #A36AD1,
+text_mild_violet: #8A46BD,
+text_deep_violet: #5F3ABE,
+text_light_green: #91D964,
+text_green: #79C66E,
+text_mild_green: #5DA543,
+text_deep_green: #006030,
+text_brilliant_green: #00826F,
+text_deep_brilliant_green: #006564,
+text_red: #EF3030,
+text_gray: #536A69
+	);
+
+.text_light, .text_hover_light:hover {
+	color: map-get($text-color,text_light) !important;
+}
+.text_yellow, .text_hover_yellow:hover {
+ 	color: map-get($text-color,text_yellow) !important;
+ }
+.text_orange, .text_hover_orange:hover {
+ 	color: map-get($text-color,text_orange) !important;
+ }
+.text_mild_orange, .text_hover_mild_orange:hover {
+ 	color: map-get($text-color,text_mild_orange) !important;
+ }
+.text_deep_orange, .text_hover_deep_orange:hover {
+ 	color: map-get($text-color,text_deep_orange) !important;
+ }
+.text_light_blue, .text_hover_light_blue:hover {
+ 	color: map-get($text-color,text_light_blue) !important;
+ }
+.text_blue, .text_hover_blue:hover {
+ 	color: map-get($text-color,text_blue) !important;
+ }
+.text_medium_blue, .text_hover_medium_blue:hover {
+ 	color: map-get($text-color,text_medium_blue) !important;
+ }
+.text_deep_blue, .text_hover_deep_blue:hover {
+ 	color: map-get($text-color,text_deep_blue) !important;
+ }
+.text_violet, .text_hover_violet:hover {
+ 	color: map-get($text-color,text_violet) !important;
+ }
+.text_mild_violet, .text_hover_mild_violet:hover {
+ 	color: map-get($text-color,text_mild_violet) !important;
+ }
+.text_deep_violet, .text_hover_deep_violet:hover {
+ 	color: map-get($text-color,text_deep_violet) !important;
+ }
+.text_light_green, .text_hover_light_green:hover {
+ 	color: map-get($text-color,text_light_green) !important;
+ }
+.text_green, .text_hover_green:hover {
+ 	color: map-get($text-color,text_green) !important;
+ }
+.text_mild_green, .text_hover_mild_green:hover {
+ 	color: map-get($text-color,text_mild_green) !important;
+ }
+.text_deep_green, .text_hover_deep_green:hover {
+ 	color: map-get($text-color,text_deep_green) !important;
+ }
+.text_brilliant_green, .text_hover_brilliant_green:hover {
+ 	color: map-get($text-color,text_brilliant_green) !important;
+ }
+.text_deep_brilliant_green, .text_hover_deep_brilliant_green:hover {
+ 	color: map-get($text-color,text_deep_brilliant_green) !important;
+ }
+.text_red, .text_hover_red:hover {
+	color: map-get($text-color,text_red) !important;
+}
+
+.text_gray, .text_gray:hover{
+	color: map-get($text-color,text_gray) !important;
+}
+
+ .text_light-bg {
+ 	background-color: map-get($text-color,text_light);
+ }
+.text_yellow-bg {
+ 	background-color: map-get($text-color,text_yellow);
+ }
+.text_orange-bg {
+ 	background-color: map-get($text-color,text_orange);
+ }
+.text_mild_orange-bg {
+ 	background-color: map-get($text-color,text_mild_orange);
+ }
+.text_deep_orange-bg {
+ 	background-color: map-get($text-color,text_deep_orange);
+ }
+.text_light_blue-bg {
+ 	background-color: map-get($text-color,text_light_blue);
+ }
+.text_blue-bg {
+ 	background-color: map-get($text-color,text_blue);
+ }
+.text_medium_blue-bg {
+ 	background-color: map-get($text-color,text_medium_blue);
+ }
+.text_deep_blue-bg {
+ 	background-color: map-get($text-color,text_deep_blue);
+ }
+.text_violet-bg {
+ 	background-color: map-get($text-color,text_violet);
+ }
+.text_mild_violet-bg {
+ 	background-color: map-get($text-color,text_mild_violet);
+ }
+.text_deep_violet-bg {
+ 	background-color: map-get($text-color,text_deep_violet);
+ }
+.text_light_green-bg {
+ 	background-color: map-get($text-color,text_light_green);
+ }
+.text_green-bg {
+ 	background-color: map-get($text-color,text_green);
+ }
+.text_mild_green-bg {
+ 	background-color: map-get($text-color,text_mild_green);
+ }
+.text_deep_green-bg {
+ 	background-color: map-get($text-color,text_deep_green);
+ }
+.text_brilliant_green-bg {
+ 	background-color: map-get($text-color,text_brilliant_green);
+ }
+.text_deep_brilliant_green-bg {
+ 	background-color: map-get($text-color,text_deep_brilliant_green);
+ }
+.text_red-bg{
+	background-color: map-get($text-color,text_red);
+}
+
+.text_gray-bg{
+	background-color: map-get($text-color,text_gray);
+}
+
+.full-screen {
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.highlight {
+	color: $site-accent;
+}
+
+.block {
+   @include block;
+   position: relative;
+}
+
+.light-bg {
+	background: $light-bg;
+}
+
+a {
+	@include transition($transition-base);
+}
+

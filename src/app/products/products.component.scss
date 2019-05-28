@@ -1,0 +1,110 @@
+@import "~src/sass/wrap";
+
+/*------------- PRODUCTS --------------*/
+
+.swell-product-wrap {
+	margin-bottom: 2rem;
+}
+
+.swell-product {
+	border: none;
+	border-radius: 0;
+	text-align: center;
+	height: 100%;
+	overflow: hidden;
+
+	.on-sale {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: $swell-title-autumn;
+    padding: 0.5rem 2.5rem 1.5rem;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+    color: #fff;
+    -moz-transform: rotate(-45deg);
+}
+
+	.cart-link {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background: $swell-title-rainy;
+    padding: 0.5rem 3rem 1.5rem;
+    -webkit-transform: translate(-100px,100px) rotate(45deg);
+    -ms-transform: translate(-100px,100px) rotate(45deg);
+    -o-transform: translate(-100px,100px) rotate(45deg);
+    transform: translate(-100px,100px) rotate(45deg);
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+    color: #fff !important;
+    text-decoration: none;
+    -moz-transform: translate(-100px,100px) rotate(45deg);
+}
+
+	.img-wrap {
+		overflow: hidden;
+		position: relative;
+
+		img {
+			@include transition($transition-base);
+		}
+
+	.hover_img {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    -webkit-transform: translate(-350px);
+	    -moz-transform: translate(-350px);
+	    -ms-transform: translate(-350px);
+	    -o-transform: translate(-350px);
+	    transform: translate(-350px);
+		// display: none;
+	}
+
+	&:hover {
+		.small_img {
+			-webkit-transform: translate(350px);
+			-moz-transform: translate(350px);
+			-ms-transform: translate(350px);
+			-o-transform: translate(350px);
+			transform: translate(350px);
+			// display: none;
+		}
+		.hover_img {
+			display: block;
+			-webkit-transform: scale(1.2);
+		    -moz-transform: scale(1.2);
+		    -ms-transform: scale(1.2);
+		    -o-transform: scale(1.2);
+		    transform: scale(1.2);
+		    left: 50%;
+		    -webkit-transform: translate(-50%);
+	    -moz-transform: translate(-50%);
+	    -ms-transform: translate(-50%);
+	    -o-transform: translate(-50%);
+	    transform: translate(-50%);
+		}
+	}
+}
+
+&:hover {
+	.cart-link {
+    -webkit-transform: translate(0px) rotate(45deg);
+    -ms-transform: translate(0px) rotate(45deg);
+    -o-transform: translate(0px) rotate(45deg);
+    transform: translate(0px) rotate(45deg);
+    opacity: 1;
+    -moz-transform: translate(0px) rotate(45deg);
+}
+}
+}
+

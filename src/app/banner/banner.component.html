@@ -1,0 +1,30 @@
+<!-- Banner Section -->
+<div class="swell-banner swell-slider">
+  <ngx-slick-carousel
+    class="banner"
+    #slickModal="slick-carousel"
+    [config]="slideConfig"
+  >
+    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+      <div
+        class="slide-wrap full-screen"
+        [style.backgroundImage]="'url(' + slide.img + ')'"
+      >
+        <!-- <img src="{{ slide.img }}" alt="Slider" class="img-fluid"> -->
+        <div class="inner-wrap row">
+          <div class="content-wrap col-md-6" [ngClass]=[slide.position]>
+            <div class="info-wrap">
+              <div class="card">
+                <h2 class="banner-title">
+                  Designed <span class="highlight">Well</span> <br />
+                  Modern Furniture
+                </h2>
+                <p>We Make Your Home Beautiful</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ngx-slick-carousel>
+</div>

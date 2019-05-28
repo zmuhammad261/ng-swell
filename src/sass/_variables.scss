@@ -1,0 +1,31 @@
+$site-accent: #008AFA !important;
+$light-bg: #F5F5F5 !important;
+$site-text-color: #212529;
+$footer-color: #868686;
+// Title Colors
+$swell-title-autumn: #FF9847 !important;
+$swell-title-summer: #FF6835 !important;
+$swell-title-rainy: #ACB8D3 !important;
+$swell-title-spring: #5DA543 !important;
+$swell-title-royal: #5F3ABE !important;
+$swell-title-ocean: #232291 !important;
+$swell-title-cloudy: #536A69 !important;
+
+$font-primary: 'Roboto','Lato', sans-serif;
+$font-secondary: 'Oswald', sans-serif;
+$font-tertiary: 'Montserrat', 'Lato','Roboto', sans-serif;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+// Transition //
+$enable-transitions:        true !default;
+$transition-base:             all .3s ease-in-out !default;
+$transition-cubic:            all 1s cubic-bezier(0.7, 0, 0.3, 1);
+$transition-fade:             opacity .15s linear !default;
+$transition-collapse:         height .35s ease !default;

@@ -1,0 +1,95 @@
+@import "~src/sass/wrap";
+
+/*------------- NAVBAR --------------*/
+
+.main-nav {
+    &.navbar {
+        .navbar-nav {
+        	.nav-item {
+        		.nav-link {
+        			color: #000;
+        			font-weight: 400;
+        			.icon:before {
+        				font-weight: 700 !important;
+        			}
+        		}
+        	}
+            &.swell-navbar {
+                .nav-item {
+                    padding: 0.5rem 1.0rem;
+
+                    .nav-link, .dropdown-item {
+                        text-transform: uppercase;
+                        position: relative;
+                        padding: 0;
+                        font-size: 15px;
+                    }
+
+                    &.active {
+                        .nav-link {
+                            color: $site-accent;
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                height: 2px;
+                                width: 100%;
+                                background: $site-accent;
+                            }
+
+                        }
+
+                        // .nav-link
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dropdown {
+  .dropdown-toggle{
+        margin-bottom: 2px;
+    }
+  .dropdown-menu {
+    display: block;
+    border: none;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        border-radius: 2px;
+        padding: 1.5rem 1rem;
+        -webkit-transform: rotateX(-70deg);
+    -ms-transform: rotateX(-70deg);
+    -o-transform: rotateX(-70deg);
+    transform: rotateX(-70deg);
+    -webkit-transform-origin: top center;
+    -moz-transform-origin: top center;
+    -ms-transform-origin: top center;
+    transform-origin: top center;
+    @include transition($transition-base);
+    opacity: 0;
+    filter: alpha(opacity=0);
+
+        .dropdown-item {
+            padding: 0.25rem 0.5rem !important;
+            font-size: 14px !important;
+
+        }
+}
+
+&:hover, &:focus {
+
+
+  .dropdown-menu{
+
+        margin-top: 0;
+        -webkit-transform: rotateX(0);
+    -ms-transform: rotateX(0);
+    -o-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+    }
+}
+}
