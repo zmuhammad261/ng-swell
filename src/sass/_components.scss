@@ -112,15 +112,59 @@
   }
 
 	.slick-arrow {
-		&.slick-prev {
-			left: 25px;
-		}
-		&.slick-next {
-			right: 25px;
-		}
-		&:before {
-			color: #000;
-		}
-	}
+        z-index: 1000;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        @include transition($transition-base);
+        &:before {
+          font-size: 40px;
+          font-family: $font-awesome;
+          color: #000;
+            font-weight: 300;
+        }
+        &.slick-next {
+          right: 25px;
+          &:before {
+            content: "\f054";
+          }
+        }
+        &.slick-prev {
+          left: 25px;
+          &:before {
+            content: "\f053";
+          }
+        }
+        &:not(.slick-disabled) {
+          &:hover {
+          background: #fff;
+          width: 100px;
+          height: 100px;
+          -webkit-box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14),
+            0 3px 14px 2px rgba(0, 0, 0, 0.12),
+            0 5px 5px -3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14),
+            0 3px 14px 2px rgba(0, 0, 0, 0.12),
+            0 5px 5px -3px rgba(0, 0, 0, 0.2);
+        }
+        }
+      }
+
+      .slick-dots {
+        bottom: 25px;
+
+        li {
+          button {
+            border: 2px solid #fff;
+            border-radius: 50%;
+
+            &:before {
+              font-size: 10px;
+              line-height: 22px;
+              color: #fff;
+            }
+          }
+        }
+      }
 }
 

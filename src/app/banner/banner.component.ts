@@ -14,8 +14,8 @@ export class BannerComponent implements OnInit {
   ];
   slideConfig = {
     'infinite': false,
-    'arrows': false,
-    'dots': false,
+    'arrows': true,
+    'dots': true,
     'slidesToShow': 1,
     'slidesToScroll': 1,
     'fade': true,

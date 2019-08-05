@@ -76,7 +76,7 @@
         height: 40px;
         border-radius: 50%;
         @include transition($transition-base);
-        background-color: red;
+        background: rebeccapurple;
         &:before {
           font-size: 40px;
         }
@@ -143,19 +143,19 @@
         .content-wrap {
           @include linear-gradient(to left, #008afa, #0076e1);
             .info-wrap {
-              right: -15%;
+              right: -25%;
             }
           &.content-wrap-left {
             @include linear-gradient(to left, #008afa, #0076e1);
             .info-wrap {
-              right: -15%;
+              right: -25%;
             }
           }
 
           &.content-wrap-right {
             @include linear-gradient(to right, #008afa, #0076e1);
             .info-wrap {
-              left: -15%;
+              left: -25%;
               right: unset;
             }
           }
